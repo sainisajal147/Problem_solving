@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1593565538 source:/media/sajal/A820BCCC20BCA2AC/Users/SAJAL SAINI/Desktop/c++/codes/ubuntu_1st_project/main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<set>
+

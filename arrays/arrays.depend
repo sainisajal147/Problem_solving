@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1586381086 source:c:\users\sajal saini\desktop\c++\internship\arrays\main.cpp
+	<iostream>
+
+1586550510 source:c:\users\sajal saini\desktop\c++\programs 2\arrays\main.cpp
+	<iostream>
+	<vector>
+

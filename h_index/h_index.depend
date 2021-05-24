@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1600718709 source:c:\users\sajal saini\desktop\programming\c++\h_index\main.cpp
+	<stdio.h>
+	<cmath>
+	<map>
+	<math.h>
+	<cstdio>
+	<vector>
+	<string>
+	<iostream>
+	<algorithm>
+	<stack>
+	<queue>
+	<bits/stdc++.h>
+	<math.h>
+	<set>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1588630171 source:c:\users\sajal saini\desktop\c++\internship\merge_sort\main.cpp
+	<iostream>
+	<vector>
+	<bits/stdc++.h>
+

@@ -1,0 +1,108 @@
+#include <iostream>
+
+using namespace std;
+struct node
+{
+    int data;
+    node* next;
+};
+void Insert(node * &head,int data)
+{
+    node * newn=new node();
+    newn->data=data;
+    newn->next=NULL;
+    if(head==NULL)
+        {
+            head=newn;
+            return ;
+        }
+    else if(head->data>data)
+    {
+        newn->next=head;
+        head=newn;
+        return ;
+    }
+    node * temp=head;
+    node * temp1=NULL;
+    while(temp->data<data && temp->next)
+        {
+            temp1=temp;
+            temp=temp->next;
+        }
+        if(temp->data<data)
+            temp->next=newn;
+            else
+        {
+             temp1->next=newn;
+            newn->next=temp;
+        }
+}
+void Delete(node * &head, int data)
+{
+    if(head->data==data)
+    {
+        node * temp=head;
+        head=head->next;
+        delete temp;
+        return;
+    }
+    node * temp=head;
+    node * temp1=NULL;
+    while(temp->data!=data && temp->next)
+        {
+            temp1=temp;
+            temp=temp->next;
+        }
+    if(temp->data==data)
+    {
+    temp1->next=temp->next;
+    delete temp;
+    }
+}
+void Search(node **h,int data)
+{
+    int index=data%10;
+    node * temp=h[index];
+    if(temp==NULL)
+    {
+        cout<<"element does'nt exist\n":
+            return;
+    }
+    while(temp->data<data)
+    {
+        temp=temp->next;
+    }
+    if(temp->data==data)
+    {
+        cout<<"element found :\n";
+        return;
+    }
+}
+void disp(node *h)
+{
+    if(h)
+    {
+        cout<<h->data<<" ";
+        disp(h->next);
+    }
+}
+int main()
+{
+    node * h=NULL;
+    Insert(h,12);
+    Insert(h,2);
+    Insert(h,1);
+    Insert(h,5);
+    Insert(h,13);
+    Insert(h,754);
+    disp(h);cout<<endl;
+    Delete(h,754);
+    disp(h);cout<<endl;
+    Delete(h,15);
+    disp(h);cout<<endl;
+    Delete(h,1);
+    disp(h);cout<<endl;
+    Delete(h,12);
+    disp(h);cout<<endl;
+    return 0;
+}

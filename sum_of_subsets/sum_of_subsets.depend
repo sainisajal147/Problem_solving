@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1592578041 source:c:\users\sajal saini\desktop\c++\codes\sum_of_subsets\main.cpp
+	<iostream>
+	<vector>
+	<set>
+	<algorithm>
+

@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1593200250 source:c:\users\sajal saini\desktop\c++\codes\educational_codeforces_round_90_div_2\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<bits/stdc++.h>
+	<set>
+	<map>
+	<math.h>
+	<string>
+

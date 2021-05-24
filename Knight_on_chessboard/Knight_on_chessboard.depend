@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1593087241 source:c:\users\sajal saini\desktop\c++\codes\knight_on_chessboard\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+

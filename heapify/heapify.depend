@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1588200908 source:c:\users\sajal saini\desktop\c++\internship\heapify\main.cpp
+	<iostream>
+	<cmath>
+	<bits/stdc++.h>
+	<vector>
+	<algorithm>
+

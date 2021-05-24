@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1592835918 source:c:\users\sajal saini\desktop\c++\codes\job_sequencing_bb\main.cpp
+	<iostream>
+	<vector>
+	<queue>
+

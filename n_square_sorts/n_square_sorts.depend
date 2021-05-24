@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1588295077 source:c:\users\sajal saini\desktop\c++\internship\n_square_sorts\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+	<vector>
+

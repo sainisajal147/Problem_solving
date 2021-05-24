@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1592907773 source:c:\users\sajal saini\desktop\c++\codes\binary_1_to_n\main.cpp
+	<iostream>
+	<queue>
+	<string>
+

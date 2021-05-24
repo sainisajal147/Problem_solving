@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1590282154 source:c:\users\sajal saini\desktop\c++\internship\strassens_matrix_multiplication_dac\main.cpp
+	<iostream>
+	<stdio.h>
+	<cstdlib>
+

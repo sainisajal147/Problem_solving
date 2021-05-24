@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1590545879 source:c:\users\sajal saini\desktop\c++\internship\job_sequencing_greedy_method\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+

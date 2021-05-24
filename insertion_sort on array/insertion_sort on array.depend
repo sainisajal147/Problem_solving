@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1588306407 source:c:\users\sajal saini\desktop\c++\internship\insertion_sort on array\main.cpp
+	<iostream>
+	<bits/stdc++.h>
+	<vector>
+

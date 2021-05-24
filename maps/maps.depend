@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1588914742 source:c:\users\sajal saini\desktop\c++\internship\maps\main.cpp
+	<cmath>
+	<cstdio>
+	<vector>
+	<iostream>
+	<set>
+	<map>
+	<algorithm>
+	<string>
+	<unordered_map>
+

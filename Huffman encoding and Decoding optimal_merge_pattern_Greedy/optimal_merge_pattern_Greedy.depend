@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1590642355 source:c:\users\sajal saini\desktop\c++\internship\huffman encoding and decoding optimal_merge_pattern_greedy\main.cpp
+	<iostream>
+	<map>
+	<string>
+	<bits/stdc++.h>
+	<algorithm>
+	<vector>
+

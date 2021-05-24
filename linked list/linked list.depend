@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1582656185 source:c:\users\sajal saini\desktop\c++\codeblocks\linked list\main.cpp
+	<iostream>
+	<iomanip>
+	<string>
+	<cstring>
+	<stack>
+

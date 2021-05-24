@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1588540155 source:c:\users\sajal saini\desktop\c++\internship\selection_sort\main.cpp
+	<iostream>
+	<vector>
+	<bits/stdc++.h>
+
