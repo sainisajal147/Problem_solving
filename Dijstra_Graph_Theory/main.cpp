@@ -2,9 +2,35 @@
 #include<vector>
 #include<algorithm>
 #include<map>
+#include<bits/stdc++.h>
 #include<queue>
 using namespace std;
 #define I 32768
+
+template <class t>
+void disp(vector<vector<t>> v)
+{
+    for(int i=0;i<v.size();i++)
+    {
+        for(int j=0;j<v[i].size();j++)
+        {
+            cout<<v[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+template <class t>
+void disp(vector<t> v)
+{
+    for(int i=0;i<v.size();i++)
+    {
+        cout<<v[i]<<" ";
+    }
+    cout<<endl;
+}
+
+
 struct node
 {
     int cost;
@@ -54,6 +80,33 @@ void Dijkstra(int start, int **a,int n)
             x++;
         }
     }
+    vector<int> visi(n,0);
+    vector<int> dis(n,I);
+    queue<int> q;
+    q.push(start);
+    visi[start]=1;
+    dis[start]=0;
+    for(int i=1;i<n;i++)
+    {
+        if(dis[start]+a[start][i]<dis[i])
+            dis[i]=dis[start]+a[start][i];
+    }
+    while(!q.empty())
+    {
+        int temp=q.front();
+        cout<<temp<<" ";
+        for(int i=0;i<n;i++)
+        {
+            if(visi[i]==0 and a[temp][i]>0 and a[temp][i]!=I)
+            {
+                q.push(i);
+                visi[i]=1;
+            }
+        }
+        q.pop();
+    }
+    disp(visi);
+    disp(dis);
 }
 int main()
 {

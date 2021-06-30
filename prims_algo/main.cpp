@@ -2,7 +2,7 @@
 
 using namespace std;
 #define e 32767
-void disp(int n,int **g)
+void disp(int n,int g[4][4])
 {
     for(int i=1;i<n;i++)
     {
@@ -13,7 +13,7 @@ void disp(int n,int **g)
         cout<<endl;
     }
 }
-void prim(int n,int **g)
+void prim(int n,int g[4][4])
 {
     int t[2][n-2];
     int near[n];
@@ -61,7 +61,7 @@ void prim(int n,int **g)
         }
     }
     int sum=0;
-    /*for(int i=0;i<2;i++)
+    for(int i=0;i<2;i++)
     {
         for(int j=0;j<n-2;j++)
         {
@@ -73,7 +73,7 @@ void prim(int n,int **g)
     {
         cout<<near[i]<<" ";
     }
-    cout<<endl;*/
+    cout<<endl;
     for(int i=0;i<n-2;i++)
     {
         sum+=g[t[0][i]][t[1][i]];
@@ -82,10 +82,10 @@ void prim(int n,int **g)
 }
 int main()
 {
-    int n,m;
-    cin>>n>>m;
-    //int g[8][8]={{e,e,e,e,e,e,e,e},{e,e,25,e,e,e,5,e},{e,25,e,12,e,e,e,10},{e,e,12,e,8,e,e,e},{e,e,e,8,e,16,e,14},{e,e,e,e,16,e,20,18},{e,5,e,e,e,20,e,e,},{e,e,10,e,14,18,e,e}};
-    int **g;
+    int n=3,m=3;
+    //cin>>n>>m;
+    int g[4][4]={{e,e,e,e},{e,e,10,9},{e,10,e,5},{e,9,5,e}};
+    /*int **g;
     g=new int * [n+1];
     for(int i=0;i<n+1;i++)
     {
@@ -106,7 +106,7 @@ int main()
         g[y][x]=r;
     }
     int start;
-    cin>>start;
+    cin>>start;*/
     prim(n+1,g);
     return 0;
 }
