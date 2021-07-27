@@ -62,7 +62,35 @@ string int_to_roman(int num)
 	return ans;
 }
 
+string intToRoman(int A) {
+    map<int,string> m;
+    m[1]="I";
+    m[4]="IV";
+    m[5]="V";
+    m[9]="IX";
+    m[10]="X";
+    m[40]="XL";
+    m[50]="L";
+    m[90]="XC";
+    m[100]="C";
+    m[400]="CD";
+    m[500]="D";
+    m[900]="DM";
+    m[1000]="M";
+   	string ans="";
+    vector<int> v={1000,900,500,400,100,90,50,40,10,9,5,4,1};
+    for(int i=0;i<v.size();i++)
+    {
+        while(A>=v[i])
+        {
+        	ans+=m[v[i]];
+        	A=A-v[i];
+        }
+    }
+    return ans;
+}
+
 int main(void) {
-	cout<<int_to_roman(99);
+	cout<<intToRoman(99);
 	return 0;
 }

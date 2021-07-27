@@ -45,22 +45,15 @@ void disp(vector<t> v)
 
 struct node
 {
-	char ch;
-	node * child[26];
+	vector<node *> child;
 	bool end;
-};
-
-node * getnew(char ch)
-{
-	node * newn=new node();
-	newn->ch=ch;
-	newn->end=false;
-	for(int i=0;i<26;i++)
+	node()
 	{
-		(newn->child)[i]=NULL;
+		this->end=false;
+		for(int i=0;i<26;i++)
+			(this->child).push_back(NULL);
 	}
-	return newn;
-}
+};
 
 node * insert_node(node * root, string s)
 {
@@ -68,9 +61,9 @@ node * insert_node(node * root, string s)
 	for(int i=0;i<s.size();i++)
 	{
 		int x=s[i]-'a';
-		if(!temp->child[x])
+		if(temp->child[x]==NULL)
 		{
-			temp->child[x]=getnew(s[i]);
+			temp->child[x]=new node();
 			temp=temp->child[x];
 		}
 	}
@@ -78,18 +71,64 @@ node * insert_node(node * root, string s)
 	return root;
 }
 
+void search_trie(node * root,string s)
+{
+	node * temp=root;
+	for(int i=0;i<s.size();i++)
+	{
+		int x=s[i]-'a';
+		if(temp->child[x]!=NULL)
+		{
+			if(temp->child[x]->end==true)
+			{
+				cout<<"word found\n";
+				return;
+			}
+			temp=temp->child[x];
+		}
+		else
+		{
+			cout<<"word not exist\n";
+			return;
+		}
+	}
+	cout<<"word not exist\n";
+	return;
+}
+
+void bfs(node * root)
+{
+	queue<node *> q;
+	q.push(root);
+	while(!q.empty())
+	{
+		node * curr=q.front();
+		q.pop();
+		for(int i=0;i<26;i++)
+		{
+			if(curr->child[i])
+			{
+				cout<<(char)('a'+i)<<" ";
+				q.push(curr->child[i]);
+			}
+		}
+	}
+	cout<<endl;
+}
 
 int main(void) {
-	vector<string> v={"abc","abgl","cdf","abcd","lmn"};
-	//disp(v);
-	node * root = new node();
-	root->end=false;
-	root=insert_node(root,"abc");
-	root=insert_node(root,"cdf");
-	for(int i=0;i<26;i++)
+	/*vector<string> v={"abc","abgl","cdf","abcd","lmn"};
+	node * root=new node();
+	for(int i=0;i<v.size();i++)
 	{
-		if(root->child[i])
-			cout<<root->child[i]->ch;
+		root=insert_node(root,v[i]);
 	}
+	cout<<endl;
+	bfs(root);
+	search_trie(root,"lm");
+	*/
+	vector<string> v={"echo dot second generation","echo show", "kindle book"};
+	sort(v.begin(), v.end());
+	disp(v);
 	return 0;
 }
